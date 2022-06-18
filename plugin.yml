@@ -1,0 +1,8 @@
+name: AutoEXP
+main: HenryDM\AutoEXP\Main
+api: [4.0.0]
+version: 2.0.0
+author: HenryDM
+load: POSTWORLD
+description: Simple Plugin To Get EXP Directly To Inventory.
+website: https://github.com/Henry12960
