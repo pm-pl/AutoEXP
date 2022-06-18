@@ -49,7 +49,7 @@ class Main extends PluginBase implements Listener {
 			$damager = $cause->getDamager();
 			if ($damager instanceof Player) {
 				$damager->getXpManager()->addXp($player->getXpDropAmount());
-				$player->setCurrentTotalXp(0);
+				$player->getXpManager()setCurrentTotalXp(0);
 			}
 		}
 	}
