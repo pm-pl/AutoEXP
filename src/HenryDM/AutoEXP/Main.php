@@ -16,12 +16,12 @@ class Main extends PluginBase implements Listener {
 		$this->getServer()->getLogger()->info("                _        ________   _______  ");
 		$this->getServer()->getLogger()->info("     /\        | |      |  ____\ \ / /  __ \ ");
 		$this->getServer()->getLogger()->info("    /  \  _   _| |_ ___ | |__   \ V /| |__) |");
-	    $this->getServer()->getLogger()->info("   / /\ \| | | | __/ _ \|  __|   > < |  ___/ ");
+	        $this->getServer()->getLogger()->info("   / /\ \| | | | __/ _ \|  __|   > < |  ___/ ");
 		$this->getServer()->getLogger()->info("  / ____ \ |_| | || (_) | |____ / . \| |     ");
 		$this->getServer()->getLogger()->info(" /_/    \_\__,_|\__\___/|______/_/ \_\_|     ");
 		$this->getServer()->getLogger()->info("");
 		$this->getServer()->getLogger()->info("By HenryDM");
-	    $this->getServer()->getLogger()->info("Support: https://github.com/Henry12960");
+	        $this->getServer()->getLogger()->info("Support: https://github.com/Henry12960");
 		$this->getServer()->getLogger()->info("Plugin Enable!");
 	}
 
