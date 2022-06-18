@@ -48,7 +48,7 @@ class Main extends PluginBase implements Listener {
 		if ($cause instanceof EntityDamageByEntityEvent) {
 			$damager = $cause->getDamager();
 			if ($damager instanceof Player) {
-				$damager->addXp($player->getXpDropAmount());
+				$damager->getXpManager()->addXp($player->getXpDropAmount());
 				$player->setCurrentTotalXp(0);
 			}
 		}
