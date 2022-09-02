@@ -53,7 +53,7 @@ class Main extends PluginBase implements Listener {
                            if (in_array($worldName, $this->getConfig()->get("kill-exp-worlds"))) {
 		              $damager->getXpManager()->addXp($player->getXpDropAmount());
 			      $player->getXpManager()->setCurrentTotalXp(0);
-
+               }
             }
          }
       } 
