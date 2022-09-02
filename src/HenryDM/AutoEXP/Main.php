@@ -22,7 +22,7 @@ class Main extends PluginBase implements Listener {
          */
 
 	public function onBreak(BlockBreakEvent $event): void {
-.              if($this->getConfig()->get("auto-block-exp") === true) {
+                if($this->getConfig()->get("auto-block-exp") === true) {
                   $player = $event->getPlayer();
                   $world = $player->getWorld();
                   $worldName = $world->getFolderName();
