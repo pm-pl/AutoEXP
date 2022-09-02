@@ -5,4 +5,5 @@ branches:
 projects:
   AutoEXP:
     path: ""
+    icon: "AutoEXP.gif"
 ...
