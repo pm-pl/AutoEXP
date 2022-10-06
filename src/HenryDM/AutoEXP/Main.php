@@ -31,6 +31,12 @@ class Main extends PluginBase implements Listener {
 
     /*** @var Config */
     public Config $cfg;    
+    
+    /*** @var AddXPForm[] */
+    public AddXPForm $addxpform; 
+    
+    /*** @var RemoveXPForm[] */
+    public RemoveXPForm $removexpform; 
 
     public function onEnable() : void {
         $this->saveResource("config.yml");
