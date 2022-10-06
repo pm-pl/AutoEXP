@@ -1,0 +1,24 @@
+---
+# =======================
+#        AUTO EXP
+# =======================
+# 1. Simple Plugin To Get EXP Directly To Inventory.
+# 2. If you see errors, report here: https://github.com/Henry12960/AutoEXP/issues/new
+# 3. Plugin made by Henry Thierry [HenryDM] 
+# 5. Henry's Website: https://github.com/Henry12960
+
+# =======================
+#        GENERAL 
+# =======================
+# 1. 'break-auto-exp' is an event that when player break a block get xp directly to inventory!
+# 2. 'kill-auto-exp' is an event that when player kill other player get xp directly to inventory!
+
+break-auto-exp: true
+kill-auto-exp: true
+auto-exp-worlds: ["world", "mine"]
+
+death-lose-exp: false
+death-lose-exp-chance: 10
+lose-exp-amount: 1
+custom-exp-worlds: ["PvP", "world"]
+...
