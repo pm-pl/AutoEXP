@@ -27,7 +27,7 @@ class RemoveEXP extends Command implements PluginOwned {
         } else {
             $sender->sendMessage("Use this command in-game!")
         }
-
+    }
     public function getOwningPlugin(): Main { 
         return Main::getInstance(); 
     }
