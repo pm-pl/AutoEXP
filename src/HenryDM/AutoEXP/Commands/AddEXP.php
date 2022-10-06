@@ -21,7 +21,7 @@ class AddEXP extends Command implements PluginOwned {
     public function execute(CommandSender $sender, string $commandLabel, array $args) {
         $main = $this->getOwningPlugin();
         if(!$sender instanceof Player) {
-                $form = new CustomForm(function(Player $playet, $result){
+                $form = new CustomForm(function(Player $player, $result){
                     if($result === null){
                         return true;
                     }
