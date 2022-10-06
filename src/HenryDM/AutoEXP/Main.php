@@ -68,8 +68,8 @@ class Main extends PluginBase implements Listener {
     }
 
     public function loadForms() {
-		$this->addxpform = new AddXPForm($this);
-		$this->removexpform = new RemoveXPForm($this);
+		$this->addxpform = new AddXPForm();
+		$this->removexpform = new RemoveXPForm();
     }
 
 	public function DeathXpChance() {
