@@ -20,7 +20,7 @@ class RemoveEXP extends Command implements PluginOwned {
 
     public function execute(CommandSender $sender, string $commandLabel, array $args) {
         $main = $this->getOwningPlugin();
-        if(!$sender instanceof Player) {
+        if($sender instanceof Player) {
             if($sender->hasPermission("autoexp.remove.xp")){
          	   Main::getInstance()->removexpform->RemoveXPForm($sender);
             }

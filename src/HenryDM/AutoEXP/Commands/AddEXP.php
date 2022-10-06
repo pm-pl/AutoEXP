@@ -20,7 +20,7 @@ class AddEXP extends Command implements PluginOwned {
 
     public function execute(CommandSender $sender, string $commandLabel, array $args) {
         $main = $this->getOwningPlugin();
-        if(!$sender instanceof Player) {
+        if($sender instanceof Player) {
             if($sender->hasPermission("autoexp.add.xp")) {
          	   Main::getInstance()->addxpform->AddXPForm($sender);
             }
