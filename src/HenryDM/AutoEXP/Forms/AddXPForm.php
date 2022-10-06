@@ -7,6 +7,8 @@ use Vecnavium\FormsUI\CustomForm;
 use pocketmine\player\Player;
 
 class AddXPForm {
+ 
+    public function __construct() { }
 
     public function AddXPForm(Player $player) {
         $form = new CustomForm(function(Player $player, $result){
