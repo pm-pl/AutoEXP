@@ -7,6 +7,7 @@ use pocketmine\event\Listener;
 
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\player\PlayerDeathEvent;
+use pocketmine\player\Player;
 
 class KillEXP implements Listener {
 
@@ -21,6 +22,7 @@ class KillEXP implements Listener {
         $worldName = $world->getFolderName();
         $cause = $player->getLastDamageCause();
 # ===================================================
+
         if($this->main->cfg->get("kill-auto-exp")) {
             if($cause instanceof EntityDamageByEntityEvent) {
                 $damager = $cause->getDamager();
