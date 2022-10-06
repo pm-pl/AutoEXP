@@ -21,11 +21,11 @@ class AddXPForm {
                 return true;
             }
             
-            $player->getXpManager()->subtractXpLevels($result[0]);
+            $player->getXpManager()->addXpLevels((int)$result[0]);
 
         });
         $form->setTitle("§l§8ADD XP");
         $form->addInput("Enter the amount of XP:");
         $player->sendForm($form);
-    }   
+    }
 }
