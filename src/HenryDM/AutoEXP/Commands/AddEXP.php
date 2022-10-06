@@ -21,21 +21,21 @@ class AddEXP extends Command implements PluginOwned {
     public function execute(CommandSender $sender, string $commandLabel, array $args) {
         $main = $this->getOwningPlugin();
         if(!$sender instanceof Player) {
-                $form = new CustomForm(function(Sender $sender, $result){
+                $form = new CustomForm(function(Player $playet, $result){
                     if($result === null){
                         return true;
                     }
                     if(trim($result[0]) === ""){
-                        $sender->sendMessage("§cYou need put player name!");
+                        $player->sendMessage("§cYou need put player name!");
                         return true;
                     }
 
                     if(trim($result[1]) === ""){
-                        $sender->sendMessage("§cYou need put xp amount!");
+                        $player->sendMessage("§cYou need put xp amount!");
                         return true;
                     }
 
-                    $sender->getXpManager()->addXpLevels($result[0], $result[1]);
+                    $player->getXpManager()->addXpLevels($result[0], $result[1]);
         
                 });
                $form->setTitle("§l§8ADD XP");
