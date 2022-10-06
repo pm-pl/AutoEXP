@@ -18,7 +18,7 @@ class RemoveEXP extends Command implements PluginOwned {
         $this->setPermission("autoexp.remove.xp");
     }
 
-    public function execute(CommandSender $sender, string $commandLabel, array $args) {
+    public function execute(CommandSender $sender, string $commandLabel, array $args,Player $player) {
         $main = $this->getOwningPlugin();
         if(!$sender instanceof Player) {
                 $form = new CustomForm(function(Player $player, $result){
