@@ -41,7 +41,7 @@ class AddEXP extends Command implements PluginOwned {
                $form->setTitle("§l§8ADD XP");
                $form->addInput("Enter player name:");
                $form->addInput("Enter the amount of XP:");
-               $sender->sendForm($form);
+               $player->sendForm($form);
             }
         }
 
