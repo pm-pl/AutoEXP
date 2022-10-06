@@ -14,7 +14,7 @@ use pocketmine\player\Player;
 class AddEXP extends Command implements PluginOwned {
 
     public function __construct() {
-        parent::__construct("addxp", "Add xp to player", null, ["axp"]);
+        parent::__construct("addxp", "Add xp levels", null, ["axp"]);
         $this->setPermission("autoexp.add.xp");
     }
 
@@ -25,23 +25,20 @@ class AddEXP extends Command implements PluginOwned {
                     if($result === null) {
                         return true;
                     }
-                    if(trim($result[0]) === ""){
-                        $player->sendMessage("§cYou need put player name!");
-                        return true;
-                    }
 
-                    if(trim($result[1]) === ""){
+                    if(trim($result[0]) === ""){
                         $player->sendMessage("§cYou need put xp amount!");
                         return true;
                     }
 
-                    $sender->getXpManager()->subtractXpLevels($result[0], $result[1]);
+                    $sender->getXpManager()->subtractXpLevels($result[0]);
         
                 });
                $form->setTitle("§l§8ADD XP");
-               $form->addInput("Enter player name:");
                $form->addInput("Enter the amount of XP:");
                $player->sendForm($form);
+            } else {
+                $sender->sendMessage("Use command in-game!");
             }
         }
 
