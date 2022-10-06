@@ -8,6 +8,8 @@ use pocketmine\player\Player;
 
 class RemoveXPForm {
 
+    public function __construct() { }
+    
     public function RemoveXPForm(Player $player) {
         $form = new CustomForm(function(Player $player, $result){
             if($result === null) {
