@@ -35,7 +35,7 @@ class RemoveEXP extends Command implements PluginOwned {
                         return true;
                     }
 
-                    $player->getXpManager()->subtractXpLevels($result[0], $result[1]);
+                    $sender->getXpManager()->subtractXpLevels($result[0], $result[1]);
         
                 });
                $form->setTitle("§l§8REMOVE XP");
