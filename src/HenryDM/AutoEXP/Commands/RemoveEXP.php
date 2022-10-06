@@ -18,28 +18,14 @@ class RemoveEXP extends Command implements PluginOwned {
         $this->setPermission("autoexp.remove.xp");
     }
 
-    public function execute(CommandSender $sender, string $commandLabel, array $args,Player $player) {
+    public function execute(CommandSender $sender, string $commandLabel, array $args) {
         $main = $this->getOwningPlugin();
         if(!$sender instanceof Player) {
-                $form = new CustomForm(function(Player $player, $result){
-                    if($result === null) {
-                        return true;
-                    }
-
-                    if(trim($result[0]) === ""){
-                        $player->sendMessage("§cYou need put xp amount!");
-                        return true;
-                    }
-
-                    $player->getXpManager()->subtractXpLevels($result[0]);
-        
-                });
-               $form->setTitle("§l§8REMOVE XP");
-               $form->addInput("Enter the amount of XP:");
-               $player->sendForm($form);
-            } else {
-                $sender->sendMessage("Use command in-gam!");   
+            if($sender->hasPermission("autoexp.remove.xp")){
+         	   Main::getInstance()->removexpform->RemoveXPForm($sender);
             }
+        } else {
+            $sender->sendMessage("Use this command in-game!")
         }
 
     public function getOwningPlugin(): Main { 

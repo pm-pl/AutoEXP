@@ -21,6 +21,9 @@ use HenryDM\AutoEXP\Events\KillEXP;
 use HenryDM\AutoEXP\Commands\AddEXP;
 use HenryDM\AutoEXP\Commands\RemoveEXP;
 
+use HenryDM\AutoEXP\Forms\AddXPForm;
+use HenryDM\AutoEXP\Forms\RemoveXPForm;
+
 class Main extends PluginBase implements Listener {  
     
     /*** @var Main|null */
@@ -33,6 +36,7 @@ class Main extends PluginBase implements Listener {
         $this->saveResource("config.yml");
         $this->cfg = $this->getConfig();
 		$this->commands();
+        $this->loadForms();
 
         $events = [
             BreakEXP::class,
@@ -55,6 +59,11 @@ class Main extends PluginBase implements Listener {
 
     public static function getInstance() : Main {
         return self::$instance;
+    }
+
+    public function loadForms() {
+		$this->addxpform = new AddXPForm($this);
+		$this->removexpform = new RemoveXPForm($this);
     }
 
 	public function DeathXpChance() {
