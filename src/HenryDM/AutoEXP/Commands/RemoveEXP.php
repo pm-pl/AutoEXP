@@ -41,7 +41,7 @@ class RemoveEXP extends Command implements PluginOwned {
                $form->setTitle("§l§8REMOVE XP");
                $form->addInput("Enter player name:");
                $form->addInput("Enter the amount of XP:");
-               $player->sendForm($form);
+               $sender->sendForm($form);
             }
         }
 

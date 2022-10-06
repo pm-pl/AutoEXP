@@ -25,7 +25,7 @@ class DeathEXP implements Listener {
         if($this->main->cfg->get("death-lose-exp") === true) {
             if(in_array($worldName, $this->getMain()->cfg->get("custom-exp-worlds", []))) {
                 if($this->main->DeathXpChance()) {
-                    $player->getXpManager()->subtractXpLevels($player, $amount);
+                    $player->getXpManager()->subtractXpLevels($amount);
                 }
             }
         }

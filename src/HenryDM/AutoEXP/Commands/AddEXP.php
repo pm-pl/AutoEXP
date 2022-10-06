@@ -25,23 +25,23 @@ class AddEXP extends Command implements PluginOwned {
                     if($result === null){
                         return true;
                     }
-                    if(trim($result[0]) === ""){
+                    if(trim($result[0]) === "") {
                         $player->sendMessage("§cYou need put player name!");
                         return true;
                     }
 
-                    if(trim($result[1]) === ""){
+                    if(trim($result[1]) === "") {
                         $player->sendMessage("§cYou need put xp amount!");
                         return true;
                     }
 
-                    $player->getXpManager()->addXpLevels($result[0], $result[1]);
+                    $sender->getXpManager()->addXpLevels($result[0], $result[1]);
         
                 });
                $form->setTitle("§l§8ADD XP");
                $form->addInput("Enter player name:");
                $form->addInput("Enter the amount of XP:");
-               $player->sendForm($form);
+               $sender->sendForm($form);
             }
         }
 
