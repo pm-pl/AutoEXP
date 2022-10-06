@@ -25,10 +25,10 @@ class AddEXP extends Command implements PluginOwned {
          	   Main::getInstance()->addxpform->AddXPForm($sender);
             }
         } else {
-            $sender->sendMessage("Use this command in-game!")
+            $sender->sendMessage("Use this command in-game!");
         }
     }
-    
+
     public function getOwningPlugin(): Main { 
         return Main::getInstance(); 
     }

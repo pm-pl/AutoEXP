@@ -25,7 +25,7 @@ class RemoveEXP extends Command implements PluginOwned {
          	   Main::getInstance()->removexpform->RemoveXPForm($sender);
             }
         } else {
-            $sender->sendMessage("Use this command in-game!")
+            $sender->sendMessage("Use this command in-game!");
         }
     }
     public function getOwningPlugin(): Main { 
