@@ -6,4 +6,6 @@ projects:
   AutoEXP:
     path: ""
     icon: "AutoEXP.png"
+    libs:
+      - src: https://poggit.pmmp.io/ci/Vecnavium/FormsUI/FormsUI
 ...
