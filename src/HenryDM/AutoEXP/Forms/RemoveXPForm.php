@@ -21,7 +21,7 @@ class RemoveXPForm {
                 return true;
             }
             
-            $player->getXpManager()->addXpLevels((int)$result[0]);
+            $player->getXpManager()->subtractXpLevels((int)$result[0]);
 
         });
         $form->setTitle("§l§8REMOVE XP");
