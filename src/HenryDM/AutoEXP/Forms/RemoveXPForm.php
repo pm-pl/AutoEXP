@@ -21,8 +21,9 @@ class RemoveXPForm {
                 return true;
             }
             
-            $player->getXpManager()->subtractXpLevels((int)$result[0]);
-
+            if($result[0] <= $player->getXpManager()->getXpLevel()) { 
+                $player->getXpManager()->subtractXpLevels((int)$result[0]);
+            }
         });
         $form->setTitle("§l§8REMOVE XP");
         $form->addInput("Enter the amount of XP:");
