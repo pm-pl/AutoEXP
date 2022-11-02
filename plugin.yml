@@ -1,7 +1,7 @@
 name: AutoEXP
 main: HenryDM\AutoEXP\Main
 api: [4.0.0]
-version: 3.1.0
+version: 3.2.0
 author: HenryDM
 description: Simple Plugin To Get EXP Directly To Inventory.
 website: https://github.com/Henry12960
