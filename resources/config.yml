@@ -15,10 +15,5 @@
 
 break-auto-exp: true
 kill-auto-exp: true
-auto-exp-worlds: ["world", "mine"]
-
-death-lose-exp: false
-death-lose-exp-chance: 10
-lose-exp-amount: 1
-custom-exp-worlds: ["PvP", "world"]
+auto-exp-worlds: ["world", "Mine"]
 ...
